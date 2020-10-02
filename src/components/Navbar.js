@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import Button from './Button'
+import LogoutButton from '../LoginAuth/LogoutButton';
 import './Navbar.css'
+import LoginButton from '../LoginAuth/LoginButton';
 
 function Navbar() {
 
@@ -57,7 +58,11 @@ function Navbar() {
                        </Link>
                    </li>
                </ul>
-               {button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}
+               {button && 
+               <>
+                   <LoginButton>Sign Up/Login</LoginButton>
+                   <LogoutButton>Logout</LogoutButton>
+                   </>}
            </div>
        </nav>
        </>
